@@ -1,0 +1,32 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    background-color: #1f8365;
+    height: 70px;
+    font-family: "Roboto", sans-serif;
+
+    p {
+        cursor: default;
+    }
+
+    >div{
+        display: flex;
+        gap: 10px;
+
+        a {
+            font-size: 2rem;
+            color: #fff;
+
+            &:hover{
+                scale: 1.05;
+                transform: translateY(-5px);
+                color: #ff6127ed;
+                transition: .3s all;
+            }
+        }
+    }
+    
+}
