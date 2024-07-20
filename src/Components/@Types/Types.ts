@@ -6,10 +6,3 @@ export const pharmacos = {
         qtd:1
     }
 }
-
-export const pharmacosListMenu = [
-    "Ibuprofeno",
-    "Loratadina",
-    "Resfrenol",
-    "Tylennol"
-]

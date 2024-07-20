@@ -1,13 +1,13 @@
-import { pharmacosListMenu } from "../@Types/Types";
 import styles from "./styles.module.css"
+import pharmacosJSON from "../../db/pharmacos.json"
 
 
 export function ListInnerMenu() {
     return(
         <>
             <ul className={styles.container}>
-                {pharmacosListMenu.map(pharmaco=>
-                    <li key={pharmaco}> {pharmaco} </li>)}
+                {pharmacosJSON.pharmacosList.map(pharmaco=>
+                    <li key={pharmaco.name}> {pharmaco.name} </li>)}
             </ul>
         </>
     )

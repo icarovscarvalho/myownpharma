@@ -2,11 +2,9 @@ import { Footer } from "../Footer"
 import { Header } from "../Header"
 import { Main } from "../Main"
 import styles from "./styles.module.css"
-import { pharmacos } from "../@Types/Types"
 import { MenuBar } from "../MenuBar"
-import { useState } from "react"
-
-
+import { useEffect, useState } from "react"
+import pharmacosJSON from "../../db/pharmacos.json"
 
 type PharmacoType = {
     link:string,
@@ -24,9 +22,11 @@ export function Body() {
         setIsMenuOpen(prevState=>!prevState)
     }
 
-    function readPharmacosList() {
-        
-    }
+    // console.log(pharmacosJSON.pharmacosList)
+
+    useEffect(()=>{
+        setPharmaList(pharmacosJSON.pharmacosList)
+    }, [])
 
     return(
         <>
@@ -35,12 +35,14 @@ export function Body() {
 
                 <MenuBar handleToggleMenu={handleToggleMenu} isMenuOpen={isMenuOpen} />
 
-                <Main
-                h1={pharmacos.ibuprofeno.name}
-                p={pharmacos.ibuprofeno.bula}
-                imgLink={pharmacos.ibuprofeno.img}
-                qtd={pharmacos.ibuprofeno.qtd}
-                />
+                {pharmaList.map(pharmaco=><Main
+                    key={pharmaco.name}
+                    h1={pharmaco.name}
+                    p={pharmaco.description}
+                    imgLink={pharmaco.link}
+                    qtd={pharmaco.qtd}
+                    />
+                )}
 
                 <Footer />
             </div>
