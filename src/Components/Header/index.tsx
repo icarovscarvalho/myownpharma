@@ -1,5 +1,6 @@
 import styles from "./styles.module.css"
 import { RiHealthBookFill } from "react-icons/ri";
+import { IoMdMenu } from "react-icons/io";
 
 export function Header() {
 
@@ -8,7 +9,7 @@ export function Header() {
             <header className={styles.container}>
                 <RiHealthBookFill className={styles.icon} />
                 <h1>My Own Phramacy</h1>
-                <div />
+                <IoMdMenu className={styles.icon} />
             </header>
         </>
     )

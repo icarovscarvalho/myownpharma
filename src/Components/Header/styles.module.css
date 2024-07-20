@@ -16,6 +16,18 @@
     >.icon{
         font-size: 2rem;
         filter: drop-shadow(3px 3px 5px #0008);
+
+        &:last-child{
+            cursor: pointer;
+            transition: .5s all;
+        }
+
+        &:last-child:hover{
+            scale: 1.2;
+            filter: none;
+            transform: rotate(180deg);
+            transition: .5s all;
+        }
     }
 
     >h1{

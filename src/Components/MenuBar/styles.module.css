@@ -1,0 +1,68 @@
+.containerOn{
+    display: flex;
+
+    position: absolute;
+    right: 0;
+
+    height: 85.8%;
+    width: 250px;
+    background-color: rgb(83, 179, 150);
+    border-radius: 7px 0 0 7px;
+    box-shadow: -3px 0 10px #0005;
+    overflow: hidden;
+
+    z-index: 1;
+
+    transition: .5s all;
+
+    >.recoilBtn {
+        width: 30px;
+        border: none;
+        border-right: 1px solid #096b5b;
+        cursor: pointer;
+        
+        &:first-child{
+            color: #096b5b;
+            font-size: 1.3rem;
+        }
+    }
+
+    >.menuMedicineList{
+        display: block;
+        flex: 1;
+    }
+}
+
+.containerOff {
+    display: flex;
+
+    position: absolute;
+    right: 0;
+
+    height: 85.8%;
+    width: fit-content;
+    background-color: rgb(83, 179, 150);
+    border-radius: 7px 0 0 7px;
+    box-shadow: -3px 0 10px #0005;
+    overflow: hidden;
+
+    transition: .5s all;
+
+    z-index: 1;
+
+    >.recoilBtn {
+        width: 30px;
+        border: none;
+        border-right: 1px solid #096b5b;
+        cursor: pointer;
+
+        &:first-child {
+            color: #096b5b;
+            font-size: 1.3rem;
+        }
+    }
+
+    >.menuMedicineList {
+        flex: 1;
+    }
+}
