@@ -23,8 +23,8 @@
         }
 
         &:last-child:hover{
-            scale: 1.2;
             filter: none;
+            color: #ff571b;
             transform: rotate(180deg);
             transition: .5s all;
         }
