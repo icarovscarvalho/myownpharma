@@ -1,0 +1,49 @@
+.outSide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    background-color: #000b;
+    backdrop-filter: blur(6px);
+    inset: 0;
+    z-index: 2;
+}
+
+.container{
+    background-color: #fff;
+    border: 1px solid #146d4069;
+    border-radius: 5px;
+    box-shadow: 0 0 25px #fff;
+    min-width: 500px;
+
+    >form{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+
+        >span{
+            text-transform: uppercase;
+        }
+
+        >input, textarea{
+            font-size: 1.3rem;
+            padding: 3px 10px;
+        }
+
+        >textarea{
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        >span+input, span+textarea {
+            margin-bottom: 10px;
+        }
+
+        button{
+            width: 100px;
+            height: 30px;
+            margin: auto;
+        }
+    }
+}

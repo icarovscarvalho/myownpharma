@@ -1,23 +1,22 @@
 import styles from "./styles.module.css"
 import { MdKeyboardDoubleArrowLeft, MdKeyboardDoubleArrowRight } from "react-icons/md";
-import { pharmacosListMenu } from "../@Types/Types"
-import { useState } from "react";
 import { ListInnerMenu } from "../ListInnerMenu";
 
-export function MenuBar() {
+interface MenuBarProps{
+    handleToggleMenu:()=>void
+    isMenuOpen:boolean
+}
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    function handleMenu() {
-        setIsMenuOpen(prevState=>!prevState)
-    }
+export function MenuBar({handleToggleMenu, isMenuOpen}:MenuBarProps) {
 
     return(
         <>
-            <section className={`${isMenuOpen? styles.containerOn : styles.containerOff}`}>
-                <button className={styles.recoilBtn} onClick={handleMenu}>
+            <section className={`${styles.container} ${isMenuOpen? styles.containerOn : styles.containerOff}`}>
+
+                <button className={styles.recoilBtn} onClick={handleToggleMenu}>
                     {isMenuOpen? <MdKeyboardDoubleArrowRight/> : <MdKeyboardDoubleArrowLeft/>}
                 </button>
+
                 <div className={styles.menuMedicineList}>
                     {isMenuOpen? <ListInnerMenu /> : ''}
                 </div>

@@ -6,9 +6,8 @@ export function ListInnerMenu() {
     return(
         <>
             <ul className={styles.container}>
-                <li>{pharmacosListMenu[0]}</li>
-                <li>{pharmacosListMenu[1]}</li>
-                <li>{pharmacosListMenu[2]}</li>
+                {pharmacosListMenu.map(pharmaco=>
+                    <li key={pharmaco}> {pharmaco} </li>)}
             </ul>
         </>
     )

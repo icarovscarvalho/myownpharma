@@ -4,11 +4,10 @@ interface pharmaMethod{
     h1:string,
     p:string,
     imgLink:string,
-    estoque:string,
     qtd:number
 }
 
-export function Main({h1, p, imgLink, estoque, qtd}:pharmaMethod){
+export function Main({h1, p, imgLink, qtd}:pharmaMethod){
     return(
         <>
             <main className={styles.container}>
@@ -22,7 +21,7 @@ export function Main({h1, p, imgLink, estoque, qtd}:pharmaMethod){
                         </div>
                         <div className={styles.stock}>
                             <h2>Estoque:</h2>
-                            <div>{estoque}</div>
+                            <div>{qtd > 0 ? "SIM" : "NÃO"}</div>
                         </div>
                         <div className={styles.amount}>
                             <h2>Quant. :</h2>
