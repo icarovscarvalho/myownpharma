@@ -17,9 +17,14 @@ export function Body() {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [pharmaList, setPharmaList] = useState<PharmacoType[]>([]);
+    const [selectedPharma, setSelectedPharma] = useState<number>(0)
 
     function handleToggleMenu() {
         setIsMenuOpen(prevState=>!prevState)
+    }
+
+    function selectPharma(index:number) {
+        setSelectedPharma(index)
     }
 
     // console.log(pharmacosJSON.pharmacosList)
@@ -33,16 +38,15 @@ export function Body() {
             <div className={styles.body}>
                 <Header handleToggleMenu={handleToggleMenu} />
 
-                <MenuBar handleToggleMenu={handleToggleMenu} isMenuOpen={isMenuOpen} />
+                <MenuBar handleToggleMenu={handleToggleMenu} isMenuOpen={isMenuOpen} selectPharma={selectPharma} />
 
-                {pharmaList.map(pharmaco=><Main
-                    key={pharmaco.name}
-                    h1={pharmaco.name}
-                    p={pharmaco.description}
-                    imgLink={pharmaco.link}
-                    qtd={pharmaco.qtd}
-                    />
-                )}
+                {pharmaList[selectedPharma]?.name &&<Main
+                    key={pharmaList[selectedPharma].name}
+                    h1={pharmaList[selectedPharma].name}
+                    p={pharmaList[selectedPharma].description}
+                    imgLink={pharmaList[selectedPharma].link}
+                    qtd={pharmaList[selectedPharma].qtd}
+                />}
 
                 <Footer />
             </div>

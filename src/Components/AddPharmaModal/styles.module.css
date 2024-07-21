@@ -106,3 +106,13 @@
         }
     }
 }
+
+@media (max-width:600px) {
+    .container{
+        min-width: 300px;
+
+        h1{
+            font-size: 1.3rem;
+        }
+    }
+}

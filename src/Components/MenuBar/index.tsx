@@ -2,12 +2,14 @@ import styles from "./styles.module.css"
 import { MdKeyboardDoubleArrowLeft, MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { ListInnerMenu } from "../ListInnerMenu";
 
+
 interface MenuBarProps{
     handleToggleMenu:()=>void
     isMenuOpen:boolean
+    selectPharma:(index:number)=>void
 }
 
-export function MenuBar({handleToggleMenu, isMenuOpen}:MenuBarProps) {
+export function MenuBar({handleToggleMenu, isMenuOpen, selectPharma}:MenuBarProps) {
 
     return(
         <>
@@ -18,7 +20,7 @@ export function MenuBar({handleToggleMenu, isMenuOpen}:MenuBarProps) {
                 </button>
 
                 <div className={styles.menuMedicineList}>
-                    {isMenuOpen? <ListInnerMenu /> : ''}
+                    {isMenuOpen? <ListInnerMenu selectPharma={selectPharma} /> : ''}
                 </div>
             </section>
         </>

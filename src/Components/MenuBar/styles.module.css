@@ -21,6 +21,7 @@
         border: none;
         border-right: 1px solid #096b5b;
         cursor: pointer;
+        transition: .5s;
         
         &:first-child{
             color: #096b5b;
@@ -37,5 +38,24 @@
     width: 30px;
     >.menuMedicineList {
         flex: 1;
+    }
+
+    >.recoilBtn{
+        border-right: 1px solid #096b5b00;
+        transition: .5s;
+    }
+}
+
+@media (max-width: 600px) {
+    .container{
+        top: 60px;
+
+        >.recoilBtn{
+            display: none;
+        }
+    }
+
+    .containerOff{
+        width: 0;
     }
 }
