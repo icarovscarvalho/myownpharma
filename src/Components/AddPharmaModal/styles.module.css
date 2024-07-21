@@ -13,7 +13,7 @@
 }
 
 .container{
-    background: linear-gradient(90deg, rgba(53, 209, 162, 1) 12%, rgba(52, 171, 135, 1) 50%, rgba(49, 231, 176, 1) 83%);
+    background: linear-gradient(90deg, #34ab87 50%, #35d1a2);
     border-radius: 8px;
     box-shadow: -5px 5px 10px #0008;
     min-width: 500px;
