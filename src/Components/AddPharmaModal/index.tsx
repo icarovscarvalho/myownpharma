@@ -18,16 +18,22 @@ export function AddPharmaModal({closeModal}:{closeModal:()=>void}) {
     <>
       <div className={styles.outSide} onClick={closeModal}>
           <div className={styles.container} onClick={e=>e.stopPropagation()}>
+            <div className={styles.title}>
+              <h1>Novo Medicamento</h1>
+              <button onClick={closeModal}>X</button>
+            </div>
             <form onSubmit={handleFormSubmit}>
-              <span>Link</span>
-              <input name="linkImage" type="text" placeholder="Escreva aqui..." minLength={10} required />
-              <span>Nome</span>
-              <input name="pharmaName" type="text" placeholder="Escreva aqui..." />
-              <span>Descrição</span>
-              <textarea name="usage" placeholder="Escreva aqui..." />
+              <span>Link da Imagem</span>
+              <input name="linkImage" type="text" placeholder="Escreva aqui..." minLength={3} required />
+              <span>Nome do Medicamento</span>
+              <input name="pharmaName" type="text" placeholder="Escreva aqui..." minLength={3} required />
+              <span>Descrição de uso/modo de usar</span>
+              <textarea name="usage" placeholder="Escreva aqui..." minLength={3} required />
               <span>Qtd.</span>
-              <input name="stock" type="number" />
-              <button type="submit">Adicionar</button>
+              <input className={styles.qtd} name="stock" type="number" />
+              <div className={styles.buttons}>
+                <button type="submit">Adicionar</button>
+              </div>
             </form>
           </div>
       </div>
