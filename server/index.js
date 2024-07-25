@@ -3,10 +3,11 @@ const fs = require('fs');
 const cors = require('cors');
 const app = express()
 const PORT = 3000;
-const FILE_PATH = './pharmacos.json';
+const FILE_PATH = './db/pharmacos.json';
 
 const corsOptions = {
-    origin: 'http://localhost:5173',
+    origin: '*',
+    // origin: 'http://localhost:5173',
     optionsSuccessStatus: 200 // Para alguns navegadores que requerem suporte para 204
 };
 

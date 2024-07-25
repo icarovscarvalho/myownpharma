@@ -7,10 +7,15 @@ interface MenuBarProps{
     handleToggleMenu:()=>void
     isMenuOpen:boolean
     selectPharma:(index:number)=>void
-    
+    pharmaList:{
+        name:string,
+        description:string,
+        link:string,
+        qtd:number
+    }[]
 }
 
-export function MenuBar({handleToggleMenu, isMenuOpen, selectPharma}:MenuBarProps) {
+export function MenuBar({handleToggleMenu, isMenuOpen, selectPharma, pharmaList}:MenuBarProps) {
 
     return(
         <>
@@ -21,7 +26,7 @@ export function MenuBar({handleToggleMenu, isMenuOpen, selectPharma}:MenuBarProp
                 </button>
 
                 <div className={styles.menuMedicineList}>
-                    {isMenuOpen? <ListInnerMenu selectPharma={selectPharma} /> : ''}
+                    {isMenuOpen? <ListInnerMenu selectPharma={selectPharma} pharmaList={pharmaList} /> : ''}
                 </div>
             </section>
         </>
