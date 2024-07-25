@@ -15,10 +15,19 @@
         border: 1px solid #096b5b;
         cursor: pointer;
 
+        &:hover {
+            filter: saturate(2);
+        }
+    
+        &:active {
+            box-shadow: inset 0 0 5px #0005;
+        }
+
         padding: 5px 10px;
         margin-bottom: 10px;
         width: 200px;
         text-align: center;
+        box-shadow: 0 3px 5px #0005;
 
         &.empty{
             background-color: #ff6347;
