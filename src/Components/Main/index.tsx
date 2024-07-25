@@ -1,3 +1,4 @@
+import { useState } from "react"
 import styles from "./styles.module.css"
 
 interface pharmaMethod{
@@ -8,6 +9,17 @@ interface pharmaMethod{
 }
 
 export function Main({h1, p, imgLink, qtd}:pharmaMethod){
+
+    const [actualQtd, setActualQtd] = useState<number>(qtd);
+
+    function plusQtd() {
+        setActualQtd(prevState=>prevState+1)
+    }
+
+    function minusQtd() {
+        setActualQtd(prevState=>prevState>0? prevState-1 : 0)
+    }
+
     return(
         <>
             <main className={styles.container}>
@@ -25,7 +37,12 @@ export function Main({h1, p, imgLink, qtd}:pharmaMethod){
                         </div>
                         <div className={styles.amount}>
                             <h2>Quant. :</h2>
-                            <div>{qtd}</div>
+                            <div>{actualQtd}</div>
+                            <div>
+                                <button onClick={plusQtd}>+</button>
+                                <button onClick={minusQtd} className={actualQtd == 0 ? styles.blocked : ''}>-</button>
+                            </div>
+                            {qtd != actualQtd && <button className={styles.confirmBtn}>confirmar</button>}
                         </div>
                     </div>
                 </div>

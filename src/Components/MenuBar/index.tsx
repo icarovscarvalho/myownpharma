@@ -7,6 +7,7 @@ interface MenuBarProps{
     handleToggleMenu:()=>void
     isMenuOpen:boolean
     selectPharma:(index:number)=>void
+    
 }
 
 export function MenuBar({handleToggleMenu, isMenuOpen, selectPharma}:MenuBarProps) {
