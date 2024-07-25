@@ -1,8 +1,15 @@
+import { PharmacoType } from "../Body"
 import styles from "./styles.module.css"
 
-export function AddPharmaModal({closeModal}:{closeModal:()=>void}) {
+interface ModalProps{
+  closeModal:()=>void
+  pharmaList:PharmacoType[]
+  getData:()=>void
+}
 
-  function handleFormSubmit(e:any) {
+export function AddPharmaModal({closeModal, pharmaList, getData}:ModalProps) {
+
+  async function handleFormSubmit(e:any) {
     e.preventDefault()
     const link = e.target.linkImage.value
     const name = e.target.pharmaName.value
@@ -10,8 +17,21 @@ export function AddPharmaModal({closeModal}:{closeModal:()=>void}) {
     const qtd = e.target.stock.value
 
     const newPharma = {link, name, description, qtd}
+    const newPharmaList = {pharmaList:[...pharmaList, newPharma]}
     
-    console.log(newPharma)
+    console.log(JSON.stringify(newPharmaList))
+
+    const response = await fetch('http://localhost:3000', {
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify(newPharmaList)
+    })
+
+    if(response.ok) {
+      getData()
+    }
   }
 
   return(

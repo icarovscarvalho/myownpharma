@@ -4,8 +4,9 @@ import { Main } from "../Main"
 import styles from "./styles.module.css"
 import { MenuBar } from "../MenuBar"
 import { useEffect, useState } from "react"
+import { AddPharmaModal } from "../AddPharmaModal"
 
-type PharmacoType = {
+export type PharmacoType = {
     link:string,
     name:string,
     description:string,
@@ -17,6 +18,7 @@ export function Body() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [pharmaList, setPharmaList] = useState<PharmacoType[]>([]);
     const [selectedPharma, setSelectedPharma] = useState<number>(0);
+    const [isModalOpen, setIsModalOpen] = useState(false)
 
     async function getData() {
         try{
@@ -36,14 +38,24 @@ export function Body() {
         setSelectedPharma(index)
     }
 
+    function openModal(){
+        setIsModalOpen(true)
+    }
+
+    function closeModal(){
+        setIsModalOpen(false)
+    }
+
     useEffect(()=>{
         getData()
     }, [])
 
     return(
         <>
+            {isModalOpen && <AddPharmaModal closeModal={closeModal} pharmaList={pharmaList} getData={getData} />}
+
             <div className={styles.body}>
-                <Header handleToggleMenu={handleToggleMenu} />
+                <Header handleToggleMenu={handleToggleMenu} openModal={openModal} />
 
                 <MenuBar
                 handleToggleMenu={handleToggleMenu}
