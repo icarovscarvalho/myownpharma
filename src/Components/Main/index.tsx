@@ -1,23 +1,30 @@
 import { useState } from "react"
 import styles from "./styles.module.css"
+import {PharmacoType} from "../Body";
 
 interface pharmaMethod{
     h1:string,
     p:string,
     imgLink:string,
-    qtd:number
+    qtd:number,
+    updatePharma:(data:PharmacoType)=>void
 }
 
-export function Main({h1, p, imgLink, qtd}:pharmaMethod){
+export function Main({h1, p, imgLink, qtd, updatePharma}:pharmaMethod){
 
     const [actualQtd, setActualQtd] = useState<number>(qtd);
 
     function plusQtd() {
-        setActualQtd(prevState=>prevState+1)
+        setActualQtd(prevState=>++prevState)
     }
 
     function minusQtd() {
-        setActualQtd(prevState=>prevState>0? prevState-1 : 0)
+        setActualQtd(prevState=>prevState>0? --prevState : 0)
+    }
+
+    function update(){
+        updatePharma({name:h1, description:p, link:imgLink, qtd:actualQtd})
+
     }
 
     return(
@@ -42,7 +49,7 @@ export function Main({h1, p, imgLink, qtd}:pharmaMethod){
                                 <button onClick={plusQtd}>+</button>
                                 <button onClick={minusQtd} className={actualQtd == 0 ? styles.blocked : ''}>-</button>
                             </div>
-                            {qtd != actualQtd && <button className={styles.confirmBtn}>confirmar</button>}
+                            {qtd != actualQtd && <button className={styles.confirmBtn} onClick={update}>confirmar</button>}
                         </div>
                     </div>
                 </div>

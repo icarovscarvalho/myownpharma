@@ -15,14 +15,17 @@ app.use(express.json(), cors(corsOptions));
 
 app.post('/', (req, res) => {
     const pharmacoData = req.body;
+    if (!pharmacoData.pharmacosList || !Array.isArray(pharmacoData.pharmacosList)) {
+        return res.status(400).send("Dados inválidos. Esperado um objeto com uma propriedade 'pharmacosList' que seja um array.");
+    }
     fs.writeFile(FILE_PATH, JSON.stringify(pharmacoData), 'utf8', (err) => {
-        if(!err){
-            res.status(200).send("Dados gravados com sucesso")
+        if (!err) {
+            res.status(200).send("Dados gravados com sucesso");
         } else {
-            res.status(500).send("Erro ao escrever no banco de dados.")
+            res.status(500).send("Erro ao escrever no banco de dados.");
         }
-    })
-})
+    });
+});
 
 app.get('/', (req, res) => {
     console.log("get path")
