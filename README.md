@@ -1,5 +1,7 @@
 # My Own Pharma
 
+<img align="center" src="https://github.com/user-attachments/assets/731ba335-504f-4c24-8628-68cc43fe2677" alt="Icaro-React" width="580">
+
 <div>
   <h2>Descrição</h2>
   <p>My Own Pharma é uma aplicação web desenvolvida para ajudar usuários a manterem controle sobre a quantidade e disponibilidade de medicamentos pessoais. A aplicação visa evitar a compra desnecessária de medicamentos, oferecendo uma forma organizada de gerenciar e compartilhar informações sobre remédios entre os membros de uma casa.</p>
