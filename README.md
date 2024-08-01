@@ -1,30 +1,74 @@
-# React + TypeScript + Vite
+# My Own Pharma
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div>
+  ## Descrição
+  <p>My Own Pharma é uma aplicação web desenvolvida para ajudar usuários a manterem controle sobre a quantidade e disponibilidade de medicamentos pessoais. A aplicação visa evitar a compra desnecessária de medicamentos, oferecendo uma forma organizada de gerenciar e compartilhar informações sobre remédios entre os membros de uma casa.</p>
+</div>
 
-Currently, two official plugins are available:
+<div>
+  ## Funcionalidades
+  <p>🔹Cadastro de Medicamentos: Permite adicionar novos medicamentos através de um modal interativo.</p>
+  <p>🔹Informação de Medicamentos: Exibe informações sobre os medicamentos disponíveis na barra de menu da aplicação.</p>
+  <br>
+  ##Público-Alvo
+  <p>🔹Este projeto é destinado a membros de uma casa que precisam compartilhar e gerenciar informações sobre medicamentos de forma colaborativa.</p> 
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<div>
+  ## Tecnologias Utilizadas
+  <p>React JS: O projeto foi desenvolvido usando a biblioteca React JS para a construção da interface web.</p>
+</div>
 
-## Expanding the ESLint configuration
+<div>
+  ## Instalação
+  Para começar a usar o projeto, siga os passos abaixo:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+  ## Clone o repositório:
 
-- Configure the top-level `parserOptions` property like this:
+bash
+Copiar código
+git clone https://github.com/icarovscarvalho/myownpharma.git
+Navegue até o diretório do projeto:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+bash
+Copiar código
+cd myownpharma
+Instale as dependências:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+bash
+Copiar código
+npm install
+</div>
+
+<div>
+  ## Uso
+  <p>Adicionar Novos Medicamentos:</p>
+  <br>
+  <p>🔹Clique no ícone superior esquerdo com o sinal de "+" para abrir o modal de cadastro.</p>
+  <p>🔹Preencha as informações solicitadas e salve.</p>
+  <p>🔹Alternativamente, você pode adicionar medicamentos diretamente no arquivo JSON localizado na pasta db do código.</p>
+  <br>
+  ## Visualizar Medicamentos:
+
+  Os medicamentos cadastrados serão exibidos na barra de menu à direita da tela, acessíveis através do ícone "<<" ou no menu superior direito.
+</div>
+
+<div>
+  ## Contribuição
+  <p>Atualmente, o projeto não está aberto para contribuições externas.</p>
+</div>
+
+<div>
+  ## Relatar Problemas
+  <p>Para relatar bugs ou problemas, você pode entrar em contato diretamente com o criador através do GitHub ou LinkedIn, disponíveis no rodapé da página.</p>
+</div>
+
+<div>
+  ## Licença
+  <p>Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.</p>
+</div>
+
+<div>
+  ## Agradecimentos
+  <p>Agradecimento especial a <strong>Victor Powilleit</strong> por ser um mentor essencial durante o desenvolvimento deste projeto e em toda a minha jornada de estudos.</p>
+</div>
