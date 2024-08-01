@@ -1,74 +1,72 @@
 # My Own Pharma
 
 <div>
-  ## Descrição
+  <h2>Descrição</h2>
   <p>My Own Pharma é uma aplicação web desenvolvida para ajudar usuários a manterem controle sobre a quantidade e disponibilidade de medicamentos pessoais. A aplicação visa evitar a compra desnecessária de medicamentos, oferecendo uma forma organizada de gerenciar e compartilhar informações sobre remédios entre os membros de uma casa.</p>
 </div>
 
 <div>
-  ## Funcionalidades
+  <h2>Funionalidades</h2>
   <p>🔹Cadastro de Medicamentos: Permite adicionar novos medicamentos através de um modal interativo.</p>
   <p>🔹Informação de Medicamentos: Exibe informações sobre os medicamentos disponíveis na barra de menu da aplicação.</p>
-  <br>
-  ##Público-Alvo
+</div>
+
+<div>
+  <h2>Público-Alvo</h2>
   <p>🔹Este projeto é destinado a membros de uma casa que precisam compartilhar e gerenciar informações sobre medicamentos de forma colaborativa.</p> 
 </div>
 
 <div>
-  ## Tecnologias Utilizadas
-  <p>React JS: O projeto foi desenvolvido usando a biblioteca React JS para a construção da interface web.</p>
+  <h2>Tecnologias Utilizadas</h2>
+  <img align="center" alt="Icaro-React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+  <p> React JS: O projeto foi desenvolvido usando a biblioteca React JS para a construção da interface web.</p>
 </div>
 
 <div>
-  ## Instalação
-  Para começar a usar o projeto, siga os passos abaixo:
-
-  ## Clone o repositório:
-
-bash
-Copiar código
-git clone https://github.com/icarovscarvalho/myownpharma.git
-Navegue até o diretório do projeto:
-
-bash
-Copiar código
-cd myownpharma
-Instale as dependências:
-
-bash
-Copiar código
-npm install
+  <h2>🚀 Instalação</h2>
+  <p>Para começar a usar o projeto, siga os passos abaixo:</p>
+  
+  <p><strong>Clone o repositório:</strong></p>
+  <p><code>git clone https://github.com/icarovscarvalho/myownpharma.git</code></p>
+  
+  <p><strong>Navegue até o diretório do projeto:</strong></p>
+  <p><code>cd myownpharma</code></p>
+    
+  <p><strong>Instale as dependências</strong></p>
+  <p><code>npm install</code></p>
 </div>
 
 <div>
-  ## Uso
-  <p>Adicionar Novos Medicamentos:</p>
-  <br>
+<div>
+  <h2>Uso:</h2>
+  <p><strong>Adicionar Novos Medicamentos:</strong></p>
   <p>🔹Clique no ícone superior esquerdo com o sinal de "+" para abrir o modal de cadastro.</p>
   <p>🔹Preencha as informações solicitadas e salve.</p>
   <p>🔹Alternativamente, você pode adicionar medicamentos diretamente no arquivo JSON localizado na pasta db do código.</p>
-  <br>
-  ## Visualizar Medicamentos:
 
-  Os medicamentos cadastrados serão exibidos na barra de menu à direita da tela, acessíveis através do ícone "<<" ou no menu superior direito.
+  <h2>Visualizar Medicamentos:</h2>
+  <p>Os medicamentos cadastrados serão exibidos na barra de menu à direita da tela, acessíveis através do ícone "<<" ou no menu superior direito.</p>
 </div>
 
 <div>
-  ## Contribuição
+  <h2>👩‍💻 Contribuição</h2>
   <p>Atualmente, o projeto não está aberto para contribuições externas.</p>
 </div>
 
 <div>
-  ## Relatar Problemas
-  <p>Para relatar bugs ou problemas, você pode entrar em contato diretamente com o criador através do GitHub ou LinkedIn, disponíveis no rodapé da página.</p>
+  <h2>Relatar Problemas</h2>
+  <p>Para relatar bugs ou problemas, você pode entrar em contato diretamente com o criador através do GitHub ou LinkedIn</p>
+  <a href = "mailto:icarovscarvalho@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+  <a href="https://www.linkedin.com/in/icarovscarvalho/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
 </div>
 
 <div>
-  ## Licença
+  <h2>📃 Licença</h2>
   <p>Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.</p>
 </div>
 
 <div>
-  ## Agradecimentos
-  <p>Agradecimento especial a <strong>Victor Powilleit</strong> por ser um mentor essencial durante o desenvolvimento deste projeto e em toda a minha jornada de estudos.</p>
+  <h2>Agradecimentos</h2>
+  <a href="https://github.com/victorpowilleit" target="_blank"><img src="https://img.shields.io/badge/Victor Powilleit-8A2BE2" target="_blank"></a>
+  <p>Agradecimento especial a esse grande amigo que vem me ajudando bastante e me mentorando durante todo meu aprendizado, assim como nesse projeto.</p>
 </div>
